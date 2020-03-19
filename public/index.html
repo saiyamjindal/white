@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolBar">
+     <div class="tool">
+         <a href="#pencil">
+    <img src="Icons/pencil.svg" class ="tool-img"alt="pencil">
+</a>
+</div>
+<div class="tool">
+    <img src="Icons/eraser.svg" class ="tool-img" alt="eraser">
+</div>
+</div>
+    <canvas class="board">
+
+    </canvas>
+    <script src="script.js"></script>
+    <script src ="canvas.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas class="board"></canvas>      <!-- canvas Tag -->
+    <div class="toolBar">
+        <div class="tool">
+            <img src="Icons/pencil.svg" class="tool-img" id="pencil-img" alt="" onclick="changetool('pencil')">
+            <div class="tool-options pencil">
+                <div class="pencil-size">
+                    <input type="range" min = "2" max="20" value ="10" id="pen-size">
+                </div>
+                <div class="pencil-color">
+                    <div class="colors red" onclick="colorchange('red')"></div>
+                    <div class="colors green" onclick="colorchange('green')"></div>
+                    <div class="colors blue" onclick="colorchange('blue')"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tool" >
+            <img src="Icons/eraser.svg" class="tool-img" id="eraser-img" alt="" onclick="changetool('eraser')">
+            <div class="tool-options eraser">
+                <div class="eraser-size" >
+                <input type="range"  id="eraser-size" min="2" max="20" value="10">
+                </div>
+            </div>
+        </div>
+        <div class="tool">
+            <img src="Icons/sticky notes.svg" alt="" 
+            onclick="changetool('sticky')" class="tool-img" >
+            <div class="options">
+                <div class="colors red" onclick="changeoptions('mini')"></div>
+                <div class="colors green" onclick="changeoptions('close')"></div>
+            </div>
+        </div>
+        <div class="tool">
+            <img src="./Icons/upload.svg" alt="upload" class="tool-img" id="imagepicker">
+        </div>
+        <div class="tool">
+            <input type="file" accept="file_extension|image/*" class="image-upload hidden">
+        </div>
+        <div clnass="tool">
+         <img src="./Icons/undo.svg" alt="undo" class="tool-img undo-tool">
+        </div>
+        <div class= "tool">
+        <img src="./Icons/redo.svg" class="tool-img redo-tool">
+        </div>
+        <div class= "tool">
+            <img src="./Icons/download.png" class="tool-img maxi-tool">
+            </div>
+            <div class= "tool">
+                <img src="./Icons/zoom out.png" class="tool-img mini-tool">
+                </div>
+                <div class= "tool">
+                    <img src="./Icons/download.svg" class="tool-img download-tool">
+                    </div>
+    </div>
+    <script src="upload.js"></script>
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
+    <script src="sticky.js"></script>
+    <script src="server.js"></script>
+</body>
+</html>
