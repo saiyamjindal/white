@@ -4,7 +4,7 @@ app.use(express.static('public'));
 app.get("*",function(req,res){
     res.end("<h1>response from express server</h1>");
 })
-const port = process.emv.port||3000;
+const port = process.env.PORT||3000;
 app.listen(port,function(){
     console.log("server is listening");
 })
